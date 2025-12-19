@@ -1,0 +1,91 @@
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Sid": "RequireMandatoryTagsOnEC2",
+      "Effect": "Deny",
+      "Action": [
+        "ec2:RunInstances"
+      ],
+      "Resource": [
+        "arn:aws:ec2:*:*:instance/*"
+      ],
+      "Condition": {
+        "StringNotLike": {
+          "aws:RequestTag/Environment": [
+            "Production",
+            "Development",
+            "Testing",
+            "Staging"
+          ]
+        }
+      }
+    },
+    {
+      "Sid": "RequireCostCenterTag",
+      "Effect": "Deny",
+      "Action": [
+        "ec2:RunInstances"
+      ],
+      "Resource": [
+        "arn:aws:ec2:*:*:instance/*"
+      ],
+      "Condition": {
+        "Null": {
+          "aws:RequestTag/CostCenter": "true"
+        }
+      }
+    },
+    {
+      "Sid": "RequireOwnerTag",
+      "Effect": "Deny",
+      "Action": [
+        "ec2:RunInstances"
+      ],
+      "Resource": [
+        "arn:aws:ec2:*:*:instance/*"
+      ],
+      "Condition": {
+        "Null": {
+          "aws:RequestTag/Owner": "true"
+        }
+      }
+    },
+    {
+      "Sid": "RequireApplicationTag",
+      "Effect": "Deny",
+      "Action": [
+        "ec2:RunInstances"
+      ],
+      "Resource": [
+        "arn:aws:ec2:*:*:instance/*"
+      ],
+      "Condition": {
+        "Null": {
+          "aws:RequestTag/Application": "true"
+        }
+      }
+    },
+    {
+      "Sid": "RequireDataClassificationTag",
+      "Effect": "Deny",
+      "Action": [
+        "ec2:RunInstances"
+      ],
+      "Resource": [
+        "arn:aws:ec2:*:*:instance/*"
+      ],
+      "Condition": {
+        "StringNotLike": {
+          "aws:RequestTag/DataClassification": [
+            "Public",
+            "Internal",
+            "Confidential",
+            "Restricted"
+          ]
+        }
+      }
+    }
+  ]
+}
+

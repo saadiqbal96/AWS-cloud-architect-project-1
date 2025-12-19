@@ -1,0 +1,22 @@
+{
+  "ConfigRuleName": "required-tags-rds-instances",
+  "Description": "Checks that RDS instances have all required tags",
+  "Source": {
+    "Owner": "AWS",
+    "SourceIdentifier": "REQUIRED_TAGS"
+  },
+  "Scope": {
+    "ComplianceResourceTypes": [
+      "AWS::RDS::DBInstance"
+    ]
+  },
+  "InputParameters": {
+    "tag1Key": "Environment",
+    "tag2Key": "CostCenter",
+    "tag3Key": "Owner",
+    "tag4Key": "Application",
+    "tag5Key": "DataClassification"
+  },
+  "MaximumExecutionFrequency": "TwentyFour_Hours"
+}
+

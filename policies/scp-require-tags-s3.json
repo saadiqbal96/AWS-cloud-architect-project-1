@@ -1,0 +1,58 @@
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Sid": "RequireMandatoryTagsOnS3",
+      "Effect": "Deny",
+      "Action": [
+        "s3:CreateBucket"
+      ],
+      "Resource": "*",
+      "Condition": {
+        "Null": {
+          "aws:RequestTag/Environment": "true"
+        }
+      }
+    },
+    {
+      "Sid": "RequireCostCenterOnS3",
+      "Effect": "Deny",
+      "Action": [
+        "s3:CreateBucket"
+      ],
+      "Resource": "*",
+      "Condition": {
+        "Null": {
+          "aws:RequestTag/CostCenter": "true"
+        }
+      }
+    },
+    {
+      "Sid": "RequireOwnerOnS3",
+      "Effect": "Deny",
+      "Action": [
+        "s3:CreateBucket"
+      ],
+      "Resource": "*",
+      "Condition": {
+        "Null": {
+          "aws:RequestTag/Owner": "true"
+        }
+      }
+    },
+    {
+      "Sid": "RequireDataClassificationOnS3",
+      "Effect": "Deny",
+      "Action": [
+        "s3:CreateBucket"
+      ],
+      "Resource": "*",
+      "Condition": {
+        "Null": {
+          "aws:RequestTag/DataClassification": "true"
+        }
+      }
+    }
+  ]
+}
+

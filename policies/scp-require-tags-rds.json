@@ -1,0 +1,74 @@
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Sid": "RequireMandatoryTagsOnRDS",
+      "Effect": "Deny",
+      "Action": [
+        "rds:CreateDBInstance",
+        "rds:CreateDBCluster"
+      ],
+      "Resource": [
+        "arn:aws:rds:*:*:db:*",
+        "arn:aws:rds:*:*:cluster:*"
+      ],
+      "Condition": {
+        "Null": {
+          "aws:RequestTag/Environment": "true"
+        }
+      }
+    },
+    {
+      "Sid": "RequireCostCenterOnRDS",
+      "Effect": "Deny",
+      "Action": [
+        "rds:CreateDBInstance",
+        "rds:CreateDBCluster"
+      ],
+      "Resource": [
+        "arn:aws:rds:*:*:db:*",
+        "arn:aws:rds:*:*:cluster:*"
+      ],
+      "Condition": {
+        "Null": {
+          "aws:RequestTag/CostCenter": "true"
+        }
+      }
+    },
+    {
+      "Sid": "RequireOwnerOnRDS",
+      "Effect": "Deny",
+      "Action": [
+        "rds:CreateDBInstance",
+        "rds:CreateDBCluster"
+      ],
+      "Resource": [
+        "arn:aws:rds:*:*:db:*",
+        "arn:aws:rds:*:*:cluster:*"
+      ],
+      "Condition": {
+        "Null": {
+          "aws:RequestTag/Owner": "true"
+        }
+      }
+    },
+    {
+      "Sid": "RequireDataClassificationOnRDS",
+      "Effect": "Deny",
+      "Action": [
+        "rds:CreateDBInstance",
+        "rds:CreateDBCluster"
+      ],
+      "Resource": [
+        "arn:aws:rds:*:*:db:*",
+        "arn:aws:rds:*:*:cluster:*"
+      ],
+      "Condition": {
+        "Null": {
+          "aws:RequestTag/DataClassification": "true"
+        }
+      }
+    }
+  ]
+}
+

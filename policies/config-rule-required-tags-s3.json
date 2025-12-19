@@ -1,0 +1,21 @@
+{
+  "ConfigRuleName": "required-tags-s3-buckets",
+  "Description": "Checks that S3 buckets have all required tags",
+  "Source": {
+    "Owner": "AWS",
+    "SourceIdentifier": "REQUIRED_TAGS"
+  },
+  "Scope": {
+    "ComplianceResourceTypes": [
+      "AWS::S3::Bucket"
+    ]
+  },
+  "InputParameters": {
+    "tag1Key": "Environment",
+    "tag2Key": "CostCenter",
+    "tag3Key": "Owner",
+    "tag4Key": "DataClassification"
+  },
+  "MaximumExecutionFrequency": "TwentyFour_Hours"
+}
+

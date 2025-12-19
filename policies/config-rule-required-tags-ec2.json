@@ -1,0 +1,22 @@
+{
+  "ConfigRuleName": "required-tags-ec2-instances",
+  "Description": "Checks that EC2 instances have all required tags",
+  "Source": {
+    "Owner": "AWS",
+    "SourceIdentifier": "REQUIRED_TAGS"
+  },
+  "Scope": {
+    "ComplianceResourceTypes": [
+      "AWS::EC2::Instance"
+    ]
+  },
+  "InputParameters": {
+    "tag1Key": "Environment",
+    "tag2Key": "CostCenter",
+    "tag3Key": "Owner",
+    "tag4Key": "Application",
+    "tag5Key": "DataClassification"
+  },
+  "MaximumExecutionFrequency": "TwentyFour_Hours"
+}
+

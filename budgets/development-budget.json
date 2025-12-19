@@ -1,0 +1,76 @@
+{
+  "BudgetName": "Development-Account-Monthly-Budget",
+  "BudgetLimit": {
+    "Amount": "5000",
+    "Unit": "USD"
+  },
+  "TimeUnit": "MONTHLY",
+  "BudgetType": "COST",
+  "CostFilters": {
+    "TagKeyValue": [
+      "user:Environment$Development"
+    ]
+  },
+  "CostTypes": {
+    "IncludeTax": true,
+    "IncludeSubscription": true,
+    "UseBlended": false,
+    "IncludeRefund": false,
+    "IncludeCredit": false,
+    "IncludeUpfront": true,
+    "IncludeRecurring": true,
+    "IncludeOtherSubscription": true,
+    "IncludeSupport": false,
+    "IncludeDiscount": true,
+    "UseAmortized": false
+  },
+  "NotificationsWithSubscribers": [
+    {
+      "Notification": {
+        "NotificationType": "ACTUAL",
+        "ComparisonOperator": "GREATER_THAN",
+        "Threshold": 80,
+        "ThresholdType": "PERCENTAGE"
+      },
+      "Subscribers": [
+        {
+          "SubscriptionType": "EMAIL",
+          "Address": "dev-team-lead@excipient.com"
+        }
+      ]
+    },
+    {
+      "Notification": {
+        "NotificationType": "ACTUAL",
+        "ComparisonOperator": "GREATER_THAN",
+        "Threshold": 100,
+        "ThresholdType": "PERCENTAGE"
+      },
+      "Subscribers": [
+        {
+          "SubscriptionType": "EMAIL",
+          "Address": "dev-team@excipient.com"
+        },
+        {
+          "SubscriptionType": "EMAIL",
+          "Address": "manager@excipient.com"
+        }
+      ]
+    },
+    {
+      "Notification": {
+        "NotificationType": "ACTUAL",
+        "ComparisonOperator": "GREATER_THAN",
+        "Threshold": 120,
+        "ThresholdType": "PERCENTAGE"
+      },
+      "Subscribers": [
+        {
+          "SubscriptionType": "EMAIL",
+          "Address": "department-head@excipient.com"
+        }
+      ]
+    }
+  ]
+}
+

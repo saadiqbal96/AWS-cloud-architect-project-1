@@ -1,0 +1,110 @@
+{
+  "BudgetName": "Excipient-Master-Monthly-Budget",
+  "BudgetLimit": {
+    "Amount": "50000",
+    "Unit": "USD"
+  },
+  "TimeUnit": "MONTHLY",
+  "BudgetType": "COST",
+  "CostFilters": {},
+  "CostTypes": {
+    "IncludeTax": true,
+    "IncludeSubscription": true,
+    "UseBlended": false,
+    "IncludeRefund": false,
+    "IncludeCredit": false,
+    "IncludeUpfront": true,
+    "IncludeRecurring": true,
+    "IncludeOtherSubscription": true,
+    "IncludeSupport": false,
+    "IncludeDiscount": true,
+    "UseAmortized": false
+  },
+  "NotificationsWithSubscribers": [
+    {
+      "Notification": {
+        "NotificationType": "ACTUAL",
+        "ComparisonOperator": "GREATER_THAN",
+        "Threshold": 70,
+        "ThresholdType": "PERCENTAGE"
+      },
+      "Subscribers": [
+        {
+          "SubscriptionType": "EMAIL",
+          "Address": "cfo@excipient.com"
+        },
+        {
+          "SubscriptionType": "EMAIL",
+          "Address": "cloud-team-lead@excipient.com"
+        },
+        {
+          "SubscriptionType": "SNS",
+          "Address": "arn:aws:sns:us-east-1:123456789012:budget-alerts"
+        }
+      ]
+    },
+    {
+      "Notification": {
+        "NotificationType": "ACTUAL",
+        "ComparisonOperator": "GREATER_THAN",
+        "Threshold": 85,
+        "ThresholdType": "PERCENTAGE"
+      },
+      "Subscribers": [
+        {
+          "SubscriptionType": "EMAIL",
+          "Address": "cfo@excipient.com"
+        },
+        {
+          "SubscriptionType": "EMAIL",
+          "Address": "cto@excipient.com"
+        },
+        {
+          "SubscriptionType": "EMAIL",
+          "Address": "cloud-team@excipient.com"
+        },
+        {
+          "SubscriptionType": "SNS",
+          "Address": "arn:aws:sns:us-east-1:123456789012:budget-alerts-critical"
+        }
+      ]
+    },
+    {
+      "Notification": {
+        "NotificationType": "ACTUAL",
+        "ComparisonOperator": "GREATER_THAN",
+        "Threshold": 100,
+        "ThresholdType": "PERCENTAGE"
+      },
+      "Subscribers": [
+        {
+          "SubscriptionType": "EMAIL",
+          "Address": "executive-team@excipient.com"
+        },
+        {
+          "SubscriptionType": "SNS",
+          "Address": "arn:aws:sns:us-east-1:123456789012:budget-alerts-emergency"
+        }
+      ]
+    },
+    {
+      "Notification": {
+        "NotificationType": "FORECASTED",
+        "ComparisonOperator": "GREATER_THAN",
+        "Threshold": 100,
+        "ThresholdType": "PERCENTAGE"
+      },
+      "Subscribers": [
+        {
+          "SubscriptionType": "EMAIL",
+          "Address": "cfo@excipient.com"
+        },
+        {
+          "SubscriptionType": "EMAIL",
+          "Address": "cloud-team-lead@excipient.com"
+        }
+      ]
+    }
+  ]
+}
+

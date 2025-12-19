@@ -1,0 +1,84 @@
+{
+  "BudgetName": "Production-Workload-Monthly-Budget",
+  "BudgetLimit": {
+    "Amount": "20000",
+    "Unit": "USD"
+  },
+  "TimeUnit": "MONTHLY",
+  "BudgetType": "COST",
+  "CostFilters": {
+    "TagKeyValue": [
+      "user:Environment$Production"
+    ]
+  },
+  "CostTypes": {
+    "IncludeTax": true,
+    "IncludeSubscription": true,
+    "UseBlended": false,
+    "IncludeRefund": false,
+    "IncludeCredit": false,
+    "IncludeUpfront": true,
+    "IncludeRecurring": true,
+    "IncludeOtherSubscription": true,
+    "IncludeSupport": false,
+    "IncludeDiscount": true,
+    "UseAmortized": false
+  },
+  "NotificationsWithSubscribers": [
+    {
+      "Notification": {
+        "NotificationType": "ACTUAL",
+        "ComparisonOperator": "GREATER_THAN",
+        "Threshold": 75,
+        "ThresholdType": "PERCENTAGE"
+      },
+      "Subscribers": [
+        {
+          "SubscriptionType": "EMAIL",
+          "Address": "app-team-lead@excipient.com"
+        },
+        {
+          "SubscriptionType": "EMAIL",
+          "Address": "cloud-ops@excipient.com"
+        }
+      ]
+    },
+    {
+      "Notification": {
+        "NotificationType": "ACTUAL",
+        "ComparisonOperator": "GREATER_THAN",
+        "Threshold": 90,
+        "ThresholdType": "PERCENTAGE"
+      },
+      "Subscribers": [
+        {
+          "SubscriptionType": "EMAIL",
+          "Address": "app-team@excipient.com"
+        },
+        {
+          "SubscriptionType": "SNS",
+          "Address": "arn:aws:sns:us-east-1:123456789012:prod-budget-alert"
+        }
+      ]
+    },
+    {
+      "Notification": {
+        "NotificationType": "ACTUAL",
+        "ComparisonOperator": "GREATER_THAN",
+        "Threshold": 100,
+        "ThresholdType": "PERCENTAGE"
+      },
+      "Subscribers": [
+        {
+          "SubscriptionType": "EMAIL",
+          "Address": "department-head@excipient.com"
+        },
+        {
+          "SubscriptionType": "SNS",
+          "Address": "arn:aws:sns:us-east-1:123456789012:prod-budget-critical"
+        }
+      ]
+    }
+  ]
+}
+

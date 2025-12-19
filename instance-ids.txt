@@ -1,0 +1,20 @@
+# EC2 Instance Information
+# Generated: 2025-10-27 18:46:11 UTC
+
+# East Region (us-east-1)
+EAST_INSTANCE_ID=i-01394f0ed476468a2
+EAST_PUBLIC_IP=13.220.241.49
+EAST_PRIVATE_IP=10.0.1.134
+EAST_AMI_ID=ami-057a9f77fd28e08c5
+EAST_KEY_NAME=excipient-keypair-east
+
+# West Region (us-west-2)
+WEST_INSTANCE_ID=i-024b229fd36dcf90f
+WEST_PUBLIC_IP=44.244.245.166
+WEST_PRIVATE_IP=192.168.1.73
+WEST_AMI_ID=ami-0e6af742d565ff61c
+WEST_KEY_NAME=excipient-keypair-west
+
+# Launch Configuration
+INSTANCE_TYPE=t2.micro
+LAUNCH_TIMESTAMP="2025-10-27 18:46:11 UTC"

@@ -1,7 +1,7 @@
 AWS Multi-Account Cloud Architecture Project
 ============================================
 
-**Author:** **Saad Iqbal****Role:** Cloud / Solutions Architect**Project Type:** Hands-on AWS Architecture & Governance Implementation**Last Updated:** December 2025
+**Author:** **Saad Iqbal** **Role:** Cloud / Solutions Architect**Project Type:** Hands-on AWS Architecture & Governance Implementation**Last Updated:** December 2025
 
 📌 Project Overview
 -------------------

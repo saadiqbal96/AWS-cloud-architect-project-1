@@ -10,7 +10,7 @@ Available Scripts
 
 ### 1\. create-vpcs.sh
 
-**Purpose:**Creates VPCs, subnets, internet gateways, route tables, and security groups in both us-east-1 and us-west-2 regions.
+**Purpose**:Creates VPCs, subnets, internet gateways, route tables, and security groups in both us-east-1 and us-west-2 regions.
 
 **Usage**:
 
@@ -34,7 +34,7 @@ Available Scripts
 
 **Usage:**
 
-Plain textANTLR4BashCC#CSSCoffeeScriptCMakeDartDjangoDockerEJSErlangGitGoGraphQLGroovyHTMLJavaJavaScriptJSONJSXKotlinLaTeXLessLuaMakefileMarkdownMATLABMarkupObjective-CPerlPHPPowerShell.propertiesProtocol BuffersPythonRRubySass (Sass)Sass (Scss)SchemeSQLShellSwiftSVGTSXTypeScriptWebAssemblyYAMLXML`   ./setup-peering.sh   `
+`   ./setup-peering.sh   `
 
 **Prerequisites:**
 
@@ -52,15 +52,15 @@ Plain textANTLR4BashCC#CSSCoffeeScriptCMakeDartDjangoDockerEJSErlangGitGoGraphQL
 
 ### 3\. launch-instances.sh
 
-**Purpose:**Launches EC2 instances in both VPCs for connectivity testing. Automatically discovers the latest Amazon Linux 2 AMI in each region and creates SSH key pairs if needed.
+**Purpose**:Launches EC2 instances in both VPCs for connectivity testing. Automatically discovers the latest Amazon Linux 2 AMI in each region and creates SSH key pairs if needed.
 
 **Usage:**
 
-Plain textANTLR4BashCC#CSSCoffeeScriptCMakeDartDjangoDockerEJSErlangGitGoGraphQLGroovyHTMLJavaJavaScriptJSONJSXKotlinLaTeXLessLuaMakefileMarkdownMATLABMarkupObjective-CPerlPHPPowerShell.propertiesProtocol BuffersPythonRRubySass (Sass)Sass (Scss)SchemeSQLShellSwiftSVGTSXTypeScriptWebAssemblyYAMLXML`./launch-instances.sh  ./launch-instances.sh`  
+`./launch-instances.sh  ./launch-instances.sh`  
 
 **Examples:**
 
-Plain textANTLR4BashCC#CSSCoffeeScriptCMakeDartDjangoDockerEJSErlangGitGoGraphQLGroovyHTMLJavaJavaScriptJSONJSXKotlinLaTeXLessLuaMakefileMarkdownMATLABMarkupObjective-CPerlPHPPowerShell.propertiesProtocol BuffersPythonRRubySass (Sass)Sass (Scss)SchemeSQLShellSwiftSVGTSXTypeScriptWebAssemblyYAMLXML`   # Automatic key pair creation  ./launch-instances.sh  # Custom key pair names  ./launch-instances.sh my-keypair-east my-keypair-west   `
+`   # Automatic key pair creation  ./launch-instances.sh  # Custom key pair names  ./launch-instances.sh my-keypair-east my-keypair-west   `
 
 **Prerequisites:**
 
@@ -120,9 +120,9 @@ Plain textANTLR4BashCC#CSSCoffeeScriptCMakeDartDjangoDockerEJSErlangGitGoGraphQL
 
 **Usage:**
 
-Plain textANTLR4BashCC#CSSCoffeeScriptCMakeDartDjangoDockerEJSErlangGitGoGraphQLGroovyHTMLJavaJavaScriptJSONJSXKotlinLaTeXLessLuaMakefileMarkdownMATLABMarkupObjective-CPerlPHPPowerShell.propertiesProtocol BuffersPythonRRubySass (Sass)Sass (Scss)SchemeSQLShellSwiftSVGTSXTypeScriptWebAssemblyYAMLXML`   ./cleanup-resources.sh   `
+`   ./cleanup-resources.sh   `
 
-⚠️ **WARNING:**This script permanently deletes AWS resources. Ensure all required screenshots and logs have been captured before running.
+⚠️ **WARNING**: This script permanently deletes AWS resources. Ensure all required screenshots and logs have been captured before running.
 
 **Resources Deleted:**
 
@@ -155,33 +155,33 @@ Complete Workflow
 
 ### Step 1: Create VPCs
 
-Plain textANTLR4BashCC#CSSCoffeeScriptCMakeDartDjangoDockerEJSErlangGitGoGraphQLGroovyHTMLJavaJavaScriptJSONJSXKotlinLaTeXLessLuaMakefileMarkdownMATLABMarkupObjective-CPerlPHPPowerShell.propertiesProtocol BuffersPythonRRubySass (Sass)Sass (Scss)SchemeSQLShellSwiftSVGTSXTypeScriptWebAssemblyYAMLXML`   cd scripts  chmod +x *.sh  ./create-vpcs.sh   `
+`   cd scripts  chmod +x *.sh  ./create-vpcs.sh   `
 
 ### Step 2: Set Up VPC Peering
 
-Plain textANTLR4BashCC#CSSCoffeeScriptCMakeDartDjangoDockerEJSErlangGitGoGraphQLGroovyHTMLJavaJavaScriptJSONJSXKotlinLaTeXLessLuaMakefileMarkdownMATLABMarkupObjective-CPerlPHPPowerShell.propertiesProtocol BuffersPythonRRubySass (Sass)Sass (Scss)SchemeSQLShellSwiftSVGTSXTypeScriptWebAssemblyYAMLXML`   ./setup-peering.sh   `
+`   ./setup-peering.sh   `
 
 ### Step 3: Launch EC2 Instances
 
-Plain textANTLR4BashCC#CSSCoffeeScriptCMakeDartDjangoDockerEJSErlangGitGoGraphQLGroovyHTMLJavaJavaScriptJSONJSXKotlinLaTeXLessLuaMakefileMarkdownMATLABMarkupObjective-CPerlPHPPowerShell.propertiesProtocol BuffersPythonRRubySass (Sass)Sass (Scss)SchemeSQLShellSwiftSVGTSXTypeScriptWebAssemblyYAMLXML`   ./launch-instances.sh   `
+`   ./launch-instances.sh   `
 
 ### Step 4: Test Connectivity
 
 **SSH to East Region Instance**
 
-Plain textANTLR4BashCC#CSSCoffeeScriptCMakeDartDjangoDockerEJSErlangGitGoGraphQLGroovyHTMLJavaJavaScriptJSONJSXKotlinLaTeXLessLuaMakefileMarkdownMATLABMarkupObjective-CPerlPHPPowerShell.propertiesProtocol BuffersPythonRRubySass (Sass)Sass (Scss)SchemeSQLShellSwiftSVGTSXTypeScriptWebAssemblyYAMLXML`   ssh -i ~/.ssh/your-key-east.pem ec2-user@   `
+`   ssh -i ~/.ssh/your-key-east.pem ec2-user@   `
 
 **Ping West Private IP**
 
-Plain textANTLR4BashCC#CSSCoffeeScriptCMakeDartDjangoDockerEJSErlangGitGoGraphQLGroovyHTMLJavaJavaScriptJSONJSXKotlinLaTeXLessLuaMakefileMarkdownMATLABMarkupObjective-CPerlPHPPowerShell.propertiesProtocol BuffersPythonRRubySass (Sass)Sass (Scss)SchemeSQLShellSwiftSVGTSXTypeScriptWebAssemblyYAMLXML`ping -c 4` 
+`ping -c 4` 
 
 **SSH to West Region Instance**
 
-Plain textANTLR4BashCC#CSSCoffeeScriptCMakeDartDjangoDockerEJSErlangGitGoGraphQLGroovyHTMLJavaJavaScriptJSONJSXKotlinLaTeXLessLuaMakefileMarkdownMATLABMarkupObjective-CPerlPHPPowerShell.propertiesProtocol BuffersPythonRRubySass (Sass)Sass (Scss)SchemeSQLShellSwiftSVGTSXTypeScriptWebAssemblyYAMLXML`   ssh -i ~/.ssh/your-key-west.pem ec2-user@   `
+`   ssh -i ~/.ssh/your-key-west.pem ec2-user@   `
 
 **Ping East Private IP**
 
-Plain textANTLR4BashCC#CSSCoffeeScriptCMakeDartDjangoDockerEJSErlangGitGoGraphQLGroovyHTMLJavaJavaScriptJSONJSXKotlinLaTeXLessLuaMakefileMarkdownMATLABMarkupObjective-CPerlPHPPowerShell.propertiesProtocol BuffersPythonRRubySass (Sass)Sass (Scss)SchemeSQLShellSwiftSVGTSXTypeScriptWebAssemblyYAMLXML`ping -c 4` 
+`ping -c 4` 
 
 Screenshot Evidence (Rubric Requirement)
 ----------------------------------------
@@ -219,7 +219,7 @@ Key Pair Management
 
 **Custom key pairs:**
 
-Plain textANTLR4BashCC#CSSCoffeeScriptCMakeDartDjangoDockerEJSErlangGitGoGraphQLGroovyHTMLJavaJavaScriptJSONJSXKotlinLaTeXLessLuaMakefileMarkdownMATLABMarkupObjective-CPerlPHPPowerShell.propertiesProtocol BuffersPythonRRubySass (Sass)Sass (Scss)SchemeSQLShellSwiftSVGTSXTypeScriptWebAssemblyYAMLXML`   ./launch-instances.sh my-custom-key-east my-custom-key-west   `
+`   ./launch-instances.sh my-custom-key-east my-custom-key-west   `
 
 Lambda Functions
 ----------------

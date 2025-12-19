@@ -1,7 +1,7 @@
 Scripts Directory
 =================
 
-**Project:** Excipient Technologies – Multi-Account AWS Architecture**Author:** **Saad Iqbal****Last Updated:** October 2025
+**Project**: Excipient Technologies – Multi-Account AWS Architecture**Author:** **Saad Iqbal****Last Updated:** October 2025
 
 This directory contains automation scripts for provisioning, testing, and cleaning up AWS infrastructure used in the Excipient Technologies multi-account AWS architecture project.
 
@@ -12,9 +12,9 @@ Available Scripts
 
 **Purpose:**Creates VPCs, subnets, internet gateways, route tables, and security groups in both us-east-1 and us-west-2 regions.
 
-**Usage:**
+**Usage**:
 
-Plain textANTLR4BashCC#CSSCoffeeScriptCMakeDartDjangoDockerEJSErlangGitGoGraphQLGroovyHTMLJavaJavaScriptJSONJSXKotlinLaTeXLessLuaMakefileMarkdownMATLABMarkupObjective-CPerlPHPPowerShell.propertiesProtocol BuffersPythonRRubySass (Sass)Sass (Scss)SchemeSQLShellSwiftSVGTSXTypeScriptWebAssemblyYAMLXML`   ./create-vpcs.sh   `
+`  ./create-vpcs.sh   `
 
 **Output:**
 
@@ -30,7 +30,7 @@ Plain textANTLR4BashCC#CSSCoffeeScriptCMakeDartDjangoDockerEJSErlangGitGoGraphQL
 
 ### 2\. setup-peering.sh
 
-**Purpose:**Establishes a VPC peering connection between the us-east-1 and us-west-2 VPCs and updates route tables for inter-VPC communication.
+**Purpose**: Establishes a VPC peering connection between the us-east-1 and us-west-2 VPCs and updates route tables for inter-VPC communication.
 
 **Usage:**
 

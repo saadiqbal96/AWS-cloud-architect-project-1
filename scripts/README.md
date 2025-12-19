@@ -3,7 +3,7 @@ Scripts Directory
 
 **Project**: Excipient Technologies – Multi-Account AWS Architecture
 **Author:** **Saad Iqbal** 
-**Last Updated:** November 2025
+**Last Updated:** December 2025
 
 This directory contains automation scripts for provisioning, testing, and cleaning up AWS infrastructure used in the Excipient Technologies multi-account AWS architecture project.
 
